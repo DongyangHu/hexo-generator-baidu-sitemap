@@ -10,7 +10,8 @@
   var url = baiduUrl + config.root;
   posts.forEach(function(post){
   if(post.categories){
-%>  <url>
+%>  
+  <url>
     <loc><%- encodeURI(url + post.path) %></loc>
     <lastmod><%= post.updated.toDate().toISOString().replace(/T.*$/i, "") || post.date.toDate().toISOString().replace(/T.*$/i, "") %></lastmod>
   </url><%}}) %>
